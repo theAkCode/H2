@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Card</title>
+    <link rel="stylesheet" href="diseases.css">
+    <style>
+       
+        .home-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            text-decoration: none; 
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: black; 
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card" onclick="window.location.href='da.html'">
+            <img src="../images/Cancer.jpg" alt="Card Image" class="card-img">
+            <div class="card-info">
+                <h3>Cancer</h3>
+                
+            </div>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card" onclick="window.location.href='db.html'">
+            <img src="../images/aid.jpg" alt="Card Image" class="card-img">
+            <div class="card-info">
+                <h3>HIV/AIDS</h3>
+                
+            </div>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card" onclick="window.location.href='dc.html'">
+            <img src="../images/heart.jpg" alt="Card Image" class="card-img">
+            <div class="card-info">
+                <h3>Heart Attack</h3>
+               
+            </div>
+        </div>
+    </div> 
+    <div class="card-container">
+        <div class="card" onclick="window.location.href='dd.html'">
+            <img src="../images/covid.jpg" alt="Card Image" class="card-img">
+            <div class="card-info">
+                <h3>COVID-19</h3>
+            </div>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card" onclick="window.location.href='de.html'">
+            <img src="../images/Dengue.jpg" alt="Card Image" class="card-img">
+            <div class="card-info">
+                <h3>Dengue Fever</h3>
+                
+            </div>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card" onclick="window.location.href='df.html'">
+            <img src="../images/Rabies.jpg" alt="Card Image" class="card-img">
+            <div class="card-info">
+                <h3>Rabies</h3>
+                
+            </div>
+        </div>
+    </div>
+    <a href="/main.html" class="home-button"> Home </a>
+    <script src="script.js"></script>
+</body>
+</html>

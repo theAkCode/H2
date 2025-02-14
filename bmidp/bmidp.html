@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bmidp</title>
+    <style>
+       
+        .home-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2c3e50; 
+            color: white;
+            text-align: center;
+            text-decoration: none; 
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+       
+        .home-button:hover {
+            background-color:black; 
+        }
+    </style>
+</head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BMI-Based Diet Planner</h1>
+        <label for="weight">Weight (kg):</label>
+        <input id="weight" placeholder="Enter your weight in kg" required>
+        <label for="height">Height (cm):</label>
+        <input id="height" placeholder="Enter your height in cm" required>
+        <button onclick="calculateBMI()">Calculate BMI</button>
+        <a href="../main.html" class="home-button"> Back </a>
+        <div class="result" id="result"></div>
+        <div class="diet-plan" id="diet-plan" >Enter your details and get your diet plan!</div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

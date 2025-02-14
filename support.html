@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            background-color: #222;
+            color: #ccc;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 35px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+        }
+
+        label {
+            color: #ccc;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #444;
+            color: #ccc;
+        }
+
+        button {
+            background-color: #555;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #777;
+        }
+
+        .thank-you-message {
+            display: none;
+            font-size: 1.5em;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            background-color: #444;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .thank-you-message.show {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Feedback Form</h2>
+        <form id="feedbackForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="thank-you-message" id="thankYouMessage">
+        Thank you for your feedback!
+    </div>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+
+           
+            document.querySelector('.form-container').style.display = 'none';
+            const thankYouMessage = document.getElementById('thankYouMessage');
+            thankYouMessage.classList.add('show');
+            
+            
+            setTimeout(function() {
+                window.location.href = 'thankyou.html'; 
+            }, 3000);
+        });
+    </script>
+
+</body>
+</html>

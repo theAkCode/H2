@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pandemic Info</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    
+    .home-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color:#2c3e50;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    
+    .home-button:hover {
+        background-color:black; 
+    }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Pandemic Info</h1>
+    <nav>
+      
+    </nav>
+  </header>
+  
+  <main>
+    <section class="user-input">
+      <h2>Enter Your Area</h2>
+      <input type="text" id="areaInput" >
+      
+      <h2>Select Disease</h2>
+      <select id="diseaseSelect">
+        <option value="covid19">COVID-19</option>
+        <option value="monkeypox">Monkeypox</option>
+      </select>
+      
+      <button onclick="showEpidemicInfo()">Get Epidemic Info</button>
+      <a href="../main.html" class="home-button"> Back</a>
+    </section>
+    
+    <section class="overview">
+      <h2>Epidemic Overview</h2>
+      <div class="zone" id="zone">
+        <h3>Area: <span id="areaName">N/A</span></h3>
+        <p>Status: <span id="status">N/A</span></p>
+        <p>Cases: <span id="cases">N/A</span></p>
+      </div>
+    </section>
+
+    <section class="precautions">
+      <h2>Precautionary Measures</h2>
+      <ul id="precautionList">
+        <li>Wash your hands frequently for at least 20 seconds.</li>
+        <li>Wear a mask in public areas.</li>
+        <li>Maintain a safe distance of 6 feet from others.</li>
+        <li>Avoid crowded places and gatherings.</li>
+      </ul>
+    </section>
+
+    <section class="tips">
+      <h2>Health Tips</h2>
+      <ul>
+        <li>Boost immunity by eating a balanced diet.</li>
+        <li>Stay hydrated and rest well to maintain a healthy body.</li>
+        <li>Sanitize high-touch surfaces regularly.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Emergency contact:dummy</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

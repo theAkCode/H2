@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Info</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+        .home-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2c3e50; 
+            color: white;
+            text-align: center;
+            text-decoration: none; 
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+      
+        .home-button:hover {
+            background-color: black; 
+        }
+
+       
+        .remove-button {
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .remove-button:hover {
+            background-color: darkred;
+        }
+
+        .family-list {
+            margin-top: 20px;
+        }
+
+        .family-member {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Family Info</h1>
+    </header>
+
+    <section class="add-member">
+        <h2>Family member needs</h2>
+        <form id="addMemberForm">
+            <label for="name">Family Member's Name:</label>
+            <input type="text" id="name" placeholder="Enter name" required>
+
+            <label for="needs">Health & Hygiene Needs:</label>
+            <textarea id="needs" placeholder="Enter needs like medicines, sanitary pads..." required></textarea>
+
+            <button type="submit">Submit</button><br>
+            <a href="../main.html" class="home-button">Back</a>
+        </form>
+    </section>
+
+    <section class="family-list">
+        <h2>Family Members</h2>
+        <ul id="familyList"></ul>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
